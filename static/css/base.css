@@ -36,3 +36,14 @@ span {
     position: relative;
     height: 600px;
 }
+
+.main-page-text {
+    text-align: center;
+    width: 80%;
+}
+
+.order {
+    display: flex;
+    flex-direction: row;
+    list-style:none;
+}
