@@ -2,18 +2,13 @@ html {
     height: 100%;
 }
 
+/* nav bar */
 .logo {
     font-size: 3rem;
 }
 
 .top-info {
     font-size: 1.2rem;
-}
-
-.center-nav {
-    margin: auto;
-    width: 50%;
-    font-size: 1.1rem;
 }
 
 .nav-link {
@@ -31,4 +26,13 @@ ul {
 
 span {
     margin: 1rem;
+}
+
+
+/*main-img*/
+
+.hero-img {
+    width: 100%;
+    position: relative;
+    height: 600px;
 }
