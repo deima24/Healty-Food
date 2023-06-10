@@ -42,8 +42,28 @@ span {
     width: 80%;
 }
 
-.order {
-    display: flex;
+.order-cook-deliver {
     flex-direction: row;
     list-style:none;
+    display: flex;
+    width: 90%;
+    margin-left: 7rem;
+}
+
+.font-icon {
+    font-size: 5rem;
+}
+
+h6 {
+    font-size: 1.3rem;
+}
+
+/* Order btn */
+.btn-order {
+    background-color: #6495ED;
+    font-size: 1.3rem;
+}
+
+.center {
+    text-align: center;
 }
