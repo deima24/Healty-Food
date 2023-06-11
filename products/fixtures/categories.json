@@ -1,0 +1,25 @@
+[{
+    "pk": 1,
+    "model": "products.category",
+    "fields": {
+        "name": "Meat-Free",
+        "image": "#"
+    }
+},
+{
+    "pk": 2,
+    "models": "products.category",
+    "fields": {
+        "name": "With-Meat",
+        "image": "#"
+    }
+},
+{
+    "pk": 3,
+    "models": "products.category",
+    "fields": {
+        "name": "Low-Calories",
+        "image": "#"
+    }
+}
+]
