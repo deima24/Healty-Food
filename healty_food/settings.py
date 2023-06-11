@@ -28,7 +28,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['8000-deima24-healtyfood-lzgozlln8e1.ws-eu99.gitpod.io']
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-deima24-healtyfood-lzgozlln8e1.ws-eu98.gitpod.io']
+CSRF_TRUSTED_ORIGINS = ['https://8000-deima24-healtyfood-lzgozlln8e1.ws-eu99.gitpod.io']
 
 
 # Application definition
