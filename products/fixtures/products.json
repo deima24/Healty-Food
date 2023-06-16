@@ -54,7 +54,7 @@
         "name": "Herb and Garlic Baked Chicken. Serves: 2",
         "description": "If your baked chicken breast tends to turn out boring and bland, then you have to try this Garlic Herb Baked Chicken Breast. It's basically like the most delicious homemade garlic bread but made with chicken instead of bread. It's tender, juicy, has tons of herby-garlicky flavor, and it's ridiculously easy. Plus, it's quite versatile.",
         "price": "7.59",
-        "is_meat_free": true,
+        "is_meat_free": false,
         "ingredients": "4 skinless chicken breasts, trimmed of all fat. A handful of chopped herbs such as tarragon, sage, parsley. 3 garlic cloves crushed. Oil and water spray. 600-650g stir fried vegetables (choose from onions, peppers, mushrooms, shredded cabbage, lightly boiled vegetable batons, canned kidney beans).",
         "image": "#"
     }
@@ -66,7 +66,7 @@
         "name": "Chicken kebabs with garlic sauce and pickles",
         "description": "Kebabs can be very unhealthy packed full of creamy sauces, fatty meat and normally served with chips. Not this one. It's made from lightly spiced lean chicken and served with low fat garlic sauce and pickles to give it that extra twist.",
         "price": "6.99",
-        "is_meat_free": true,
+        "is_meat_free": false,
         "ingredients": "2 x cloves of garlic, peeled and chopped. 1 tbsp of olive oil. A pinch of smoked paprika. White pepper. 2 x chicken breasts cut into 2cm strips. 150g 0% fat Greek yoghurt. 1 clove of garlic, peeled and finely chopped. 1 tbsp chopped flat-leaf parsley. Squeeze of lemon juice. 2 large wholemeal wraps. 4 leaves of lettuce. 2 small vine tomatoes, quartered. 1/2 small red onion, finely sliced. A dash of tabasco.",
         "image": "#"
     }
@@ -75,23 +75,71 @@
     "pk": 7,
     "model": "products.product",
     "fields": {
-        "name": "",
-        "description": "",
-        "price": "",
-        "is_meat_free": true,
-        "ingredients": "",
+        "name": "Garlic chicken. Serves: 2",
+        "description": "Simple, delicious, tasty what could be better for a mid-week treat. We use chicken breast because once the skin is removed it is particularly low in fat.",
+        "price": "4.95",
+        "is_meat_free": false,
+        "ingredients": "2 x 4oz chicken breasts, Pinch of dried parsley, 0.5 teaspoon Rajah garlic paste, 1/4 teaspoon salt, Vegetable oil spray",
         "image": "#"
     }
 },
 {
-    "pk": 3,
+    "pk": 8,
     "model": "products.product",
     "fields": {
-        "name": "",
-        "description": "",
-        "price": "",
-        "is_meat_free": true,
-        "ingredients": "",
+        "name": "Chicken, Leek and Mushroom Pie",
+        "description": "Comfort food doesn't have to mean high fat, this heart-healthy pie uses thinly sliced potatoes to give a golden, crispy topping that's also low in saturated fat.",
+        "price": "7.99",
+        "is_meat_free": false,
+        "ingredients": "200g chestnut mushrooms, 200g button mushrooms, 500ml low-salt chicken stock, 2 chicken breasts diced, 1 leek, chopped, 1 onion diced, 500g potatoes, 2 tsp olive oil, 30g plain flour, 3-4 stems tarragon, 1 bay leaf",
+        "image": "#"
+    }
+},
+{
+    "pk": 9,
+    "model": "products.product",
+    "fields": {
+        "name": "Balsamic-Glazed Pork with Roasted Butternut Squash",
+        "description": "Make a quick pan sauce of balsamic vinegar, honey and fresh thyme to top off juicy pork tenderloin.",
+        "price": "7.99",
+        "is_meat_free": false,
+        "ingredients": "1 red onion thinly sliced, 1 lb. cubed butternut squash, 2 tbsp. olive oil divided, Kosher salt and pepper, 4 6-oz portions pork tenderloin, 1/4 c. plus 1 Tbsp balsamic vinegar divided, 2 tbsp. honey, 4 sprigs thyme, 4 c. baby arugula.",
+        "image": "#"
+    }
+},
+{
+    "pk": 10,
+    "model": "products.product",
+    "fields": {
+        "name": "Fiery Pork Lettuce Wraps",
+        "description": "Season pork tenderloin with gochujang, soy sauce, lime juice, sugar, and sesame oil for a fast and flavorful main you can eat with your hands.",
+        "price": "4.99",
+        "is_meat_free": false,
+        "ingredients": "2 tbsp. gochujang, 1 tbsp. reduced-sodium soy sauce, 1 tbsp. fresh lime juice, 1/2 tbsp. packed brown sugar, 1 tsp. toasted sesame oil, 1 tbsp. olive oil, Kosher salt and pepper, 1 1-pound pork tenderloin trimmed, Gem or baby romaine lettuce leaves, Cooked rice; sliced radishes, cucumber, scallions and chiles; and fresh cilantro and mint leaves, for serving.",
+        "image": "#"
+    }
+},
+{
+    "pk": 11,
+    "model": "products.product",
+    "fields": {
+        "name": "Grilled Chicken Skewers and Kale Caesar",
+        "description": "Serve simple grilled chicken skewers with a creamy, garlicky kale caesar salad for a light summer meal.",
+        "price": "9.99",
+        "is_meat_free": false,
+        "ingredients": "2 lemons, 1 1/2 lb. boneless skinless chicken breasts, Kosher salt and pepper, 8 thick slices baguette, 1 clove garlic halved plus 1/2 small clove garlic finely grated, 1 large egg yolk, 1/2 tsp. Dijon mustard, 1/3 c. olive oil, 1/4 c. grated Parmesan, 5 oz. baby kale.",
+        "image": "#"
+    }
+},
+{
+    "pk": 12,
+    "model": "products.product",
+    "fields": {
+        "name": "Korean Pineapple Beef Lettuce Wraps",
+        "description": "Just think of these lettuce cups as a vehicle to get all that delicious caramelized beef into your mouth.",
+        "price": "10.99",
+        "is_meat_free": false,
+        "ingredients": "1/4 c. pineapple juice, 1 clove garlic grated, 2 tbsp. low-sodium soy sauce, red pepper flakes, grated fresh ginger, honey, toasted sesame oil, sirloin, canola oil, Kosher salt, Lettuce leaves, cooked sticky rice, scallions, red chiles, and chopped peanuts for serving.",
         "image": "#"
     }
 }]
