@@ -3,7 +3,7 @@
         "model": "products.category",
         "fields": {
             "name": "Meat-Free",
-            "image": "#"
+            "image": "Meat-Free.jpg"
         }
     },
     {
@@ -11,7 +11,7 @@
         "model": "products.category",
         "fields": {
             "name": "With-Meat",
-            "image": "#"
+            "image": "With-Meat.jpg"
         }
     },
     {
@@ -19,7 +19,7 @@
         "model": "products.category",
         "fields": {
             "name": "Low-Calories",
-            "image": "#"
+            "image": "Low-Calories.jpg"
         }
     }
 ]
