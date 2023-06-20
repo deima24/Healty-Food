@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="row">
+    {% for category in categories %}
+        <div>
+            <a href="{% url 'products' %}?category={{ category.name }}" class="category-link">
+                <img class="category-img" src="{{ category.image.url }}" alt="{{ category.name }}">
+                <h2 class="category-link-title">{{ category.name }}</h2>
+            </a>
+        </div>
+    {% endfor %}
+</div>
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

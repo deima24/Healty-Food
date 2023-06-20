@@ -11,6 +11,11 @@ class ProductAdmin(admin.ModelAdmin):
         'category',
         'image',
     )
+
+
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
-    pass
+    list_display = (
+        'name',
+        'image',
+    )

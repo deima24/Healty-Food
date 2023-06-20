@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<a href="{% url 'categories' %}">Back to All Products</a>
+
+<h1>{{ current_category }}</h1>
+
+{% if current_category == "Meat-Free"%}
+    <p>Meat-Free</p>
+
+{% elif current_category == "With-Meat" %}
+    <p>With-Meat</p>
+
+{% elif current_category == "Low-Calories" %}
+    <p>Low-Calories</p>
+
+{% endif %}
+
+<div class="container">
+    
+    {% for product in products %}
+
+    {% endfor %}
+    
+</div>
+
+{% endblock %}
