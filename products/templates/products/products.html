@@ -22,7 +22,7 @@
     <div class="row d-flex justify-content-around card-container">
         {% for product in products%}
             <div class="product-card mb-5">
-                <a href="#" class="product-link mb-1">
+                <a href="{% url 'product_detail' product.id %}" class="product-link mb-1">
                     {% if product.image %}
                         <img class="product-img" src="{{ product.image.url }}" alt="{{ product.name }}">
                     {% else %}

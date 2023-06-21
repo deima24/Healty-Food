@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<a href="{% url 'products' %}?category={{ product.category }}">Back to {{ product.category }}</a>
+<h1>{{ product.name }}</h1>
+
+<div class="detail-container">
+    <div>
+        {% if product.image %}
+            <img class="detail-img px-1" src="{{ product.image.url }}" alt="{{ product.breed }}">
+        {% else %}
+            <img class="detail-img px-1" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.breed }}">
+        {% endif %}
+
+        <!-- admin user product edit options -->
+        {% if request.user.is_superuser %}
+            <small>
+                <a href="#">Edit</a> | 
+                <a class="text-danger" href="" id="delete-confirm-link-p">Delete</a>
+            </small>
+            <div id="delete-confirmation-p" class="d-none">
+                <p class="mt-3">Are you sure you want to delete {{ product.breed }}?</p>
+                <a class="btn btn-success me-2" href="#">Yes, I'm sure!</a>
+                <button class="btn btn-danger" id="cancel-delete-link-p">No, I'm not!</button>
+            </div>
+        {% endif %}
+    </div>
+</div>
+
+
+
+
+
+
+{% endblock %}
