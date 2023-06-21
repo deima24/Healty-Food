@@ -67,3 +67,21 @@ h6 {
 .center {
     text-align: center;
 }
+
+.category-img {
+    max-width: 60%;
+}
+
+.category-card {
+    
+    text-align: center;
+    border: solid 2px;
+    width: fit-content;
+    
+}
+
+.category-link-title {
+    
+    margin: 0;
+    text-align: center;
+}
