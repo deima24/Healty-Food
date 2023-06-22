@@ -85,3 +85,23 @@ h6 {
     margin: 0;
     text-align: center;
 }
+
+.product-card {
+    text-align: center;
+    border: solid 2px;
+    width: fit-content;
+}
+
+.product-link-title {
+    font-size: 1.1rem;
+    text-align: center;
+    
+}
+
+.product-link {
+    
+}
+
+.product-img {
+    width: 50%;
+}
