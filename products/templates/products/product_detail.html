@@ -4,10 +4,10 @@
 {% block content %}
 
 <a href="{% url 'products' %}?category={{ product.category }}">Back to {{ product.category }}</a>
-<h1>{{ product.name }}</h1>
+<h1 class="center">{{ product.name }}</h1>
 
 <div class="detail-container">
-    <div>
+    <div class="center">
         {% if product.image %}
             <img class="detail-img px-1" src="{{ product.image.url }}" alt="{{ product.breed }}">
         {% else %}
@@ -30,9 +30,9 @@
 
     <div class="detail-info px-4">
         <ul class="detail-list">
-            <li class="detail-list_item">{{ product.description }}</li>
-            <li class="detail-list_item">{{ product.ingredients }}</li>
-            <li class="detail-list_item">€ {{ product.price }}</li>
+            <li class="detail-list_item"><strong>Description:  </strong>{{ product.description }}</li>
+            <li class="detail-list_item"><strong>Ingredients:  </strong>{{ product.ingredients }}</li>
+            <li class="detail-list_item"><strong>Price:  </strong>£ {{ product.price }}</li>
         </ul>
 
         <!-- Form to add items to basket -->

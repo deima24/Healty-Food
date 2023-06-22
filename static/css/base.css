@@ -88,7 +88,7 @@ h6 {
 
 .product-card {
     text-align: center;
-    border: solid 2px;
+    
     width: fit-content;
 }
 
@@ -105,3 +105,4 @@ h6 {
 .product-img {
     width: 50%;
 }
+
