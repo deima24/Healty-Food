@@ -69,7 +69,8 @@ h6 {
 }
 
 .category-img {
-    max-width: 60%;
+    width: 300px; 
+    height: 300px;
 }
 
 .category-card {
@@ -103,10 +104,19 @@ h6 {
 }
 
 .product-img {
-    width: 50%;
+    
+    width: 180px; 
+    height: 180px;
+
 }
 
 .about-title {
     margin-top: 25px;
     margin-bottom: 15px;
+}
+
+.detail-list {
+    font-size: 1.3rem;
+    width: 75%;
+    
 }
