@@ -3,8 +3,20 @@
 
 {% block content %}
 
-
-
+    <h1>Shopping Basket</h1>
+        <div class="float-end my-5">
+            {% if basket_items %}
+                <div class="table-responsive"></div>
+            {% else %}
+                <p class="mt-5">Your basket is empty.</p>
+                <a href="{% url 'categories' %}" class="btn btn-colour-bg align-self-start">
+                    <span class="icon">
+                        
+                    </span>
+                    Back to products
+                </a>
+            {% endif%}
+        </div>
 
 
 
