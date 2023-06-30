@@ -36,7 +36,7 @@
         </ul>
 
         <!-- Form to add items to basket -->
-        <form class="form my-4" action="#" method="POST">
+        <form class="form my-4" action="{% url 'add_to_basket' product.id %}" method="POST">
         {% csrf_token %}
            
             <div class="form-group w-50">
