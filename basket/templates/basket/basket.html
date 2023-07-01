@@ -6,13 +6,50 @@
     <h1>Shopping Basket</h1>
         <div class="float-end my-5">
             {% if basket_items %}
-                <div class="table-responsive"></div>
+                <div class="table-responsive">
+                    <table class="table table-borderles">
+                        <thead>
+                            <tr>
+                                <th scope="col">Product</th>
+                                <th scope="col">Price</th>
+                                <th scope="col">Quantity</th>
+                                <th scope="col">Subtotal</th>
+                            </tr>
+                        </thead>
+
+                        {% for item in basket_items %}
+
+                        <tr>
+                            <td class="w-25">
+                                <img class="basket-img" src="{{ item.product.image.url }}">
+                            </td>
+                            <td>{{ item.product.price }}</td>
+                            <td>{{ item.quantity }}</td>
+                            <td>{{ item.product.price }}</td>
+                        </tr>
+
+                        {% endfor %}
+
+                        <tr>
+                            <td>Basket Total: £ {{ total | floatformat:2 }}</td>
+                            <td>Delivery Cost: £ {{ delivery | floatformat:2 }}</td>
+                            <td>Grand Total: £ {{ grand_total | floatformat:2 }}</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="{% url 'categories' %}" class="btn btn-white-bg">
+                                    Keep Shopping
+                                </a>
+                                <a href="#" class="btn btn-colour-bg mx-0">
+                                    Go to Checkout
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
             {% else %}
                 <p class="mt-5">Your basket is empty.</p>
                 <a href="{% url 'categories' %}" class="btn btn-colour-bg align-self-start">
-                    <span class="icon">
-                        
-                    </span>
                     Back to products
                 </a>
             {% endif%}
