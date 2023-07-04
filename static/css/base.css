@@ -120,3 +120,8 @@ h6 {
     width: 75%;
     
 }
+
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
