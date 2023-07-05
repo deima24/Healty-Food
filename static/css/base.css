@@ -125,3 +125,10 @@ h6 {
 .remove-item {
     cursor: pointer;
 }
+
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 9999;
+}

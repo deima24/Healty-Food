@@ -1,5 +1,9 @@
 from django.shortcuts import render, redirect, get_object_or_404, reverse, HttpResponse
+
+from django.contrib import messages
+
 from products.models import Product
+
 
 # Create your views here.
 
@@ -20,9 +24,14 @@ def add_to_basket(request, item_id):
 
     if item_id in list(basket.keys()):
         basket[item_id] += quantity
+        messages.success(
+            request,
+            f'Changed quantity of {product.name} to {basket[item_id]}.')
         
     else:
         basket[item_id] = quantity
+        messages.success(
+            request, f'{product.name} successfully added to basket.')
 
     request.session['basket'] = basket
     return redirect(redirect_url)
@@ -41,15 +50,17 @@ def adjust_basket(request, item_id):
         basket[item_id] = quantity
         messages.success(
             request,
-            f'Changed quantity of {product.breed} to {basket[item_id]}.')
+            f'Changed quantity of {product.name} to {basket[item_id]}.')
         
     else:
         basket.pop(item_id)
         messages.success(
-            request, f'Removed {product.breed} from basket.')
+            request, f'Removed {product.name} from basket.')
 
     request.session['basket'] = basket
     return redirect(reverse('basket'))
+
+    
 
 
 def remove_from_basket(request, item_id):
