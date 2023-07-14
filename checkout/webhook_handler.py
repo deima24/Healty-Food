@@ -1,4 +1,6 @@
 from django.http import HttpResponse
+from .models import Order, OrderLineItem
+from products.models import Product
 
 
 class StripeWH_Handler:
@@ -58,8 +60,7 @@ class StripeWH_Handler:
         if order_exists:
             self._send_confirmation_email(order)
             return HttpResponse(
-                content=f'Webhook received: {event["type"]} |'
-                        f'SUCCESS: Verified order already in database',
+                content=f'Webhook received: {event["type"]} |'f'SUCCESS: Verified order already in database',
                 status=200)
         else:
             order = None
