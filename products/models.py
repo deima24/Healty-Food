@@ -23,7 +23,6 @@ class Product(models.Model):
     name = models.TextField()
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
-    is_meat_free = models.BooleanField(default=False, null=True, blank=True)
     ingredients = models.TextField()
     image = models.ImageField(null=True, blank=True)
     

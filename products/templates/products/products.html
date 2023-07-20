@@ -7,17 +7,6 @@
 
 <h1>{{ current_category }}</h1>
 
-{% if current_category == "Meat-Free"%}
-    <p>Meat-Free</p>
-
-{% elif current_category == "With-Meat" %}
-    <p>With-Meat</p>
-
-{% elif current_category == "Low-Calories" %}
-    <p>Low-Calories</p>
-
-{% endif %}
-
 <div class="container-fluid">
     <div class="row d-flex justify-content-around card-container">
         {% for product in products%}

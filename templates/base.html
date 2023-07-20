@@ -49,57 +49,52 @@
         </div>
       </div>
 
-      <nav class="navbar navbar-expand-lg bg-body-tertiary navbar bg-primary">
-        <div class="container-fluid">
-          
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav"></div>
-              <ul class="nav nav-pills">
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'home' %}">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'categories' %}">Food</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'about' %}">About Us</a>
-                </li>
+      <nav class="navbar navbar-expand-md bg-body-tertiary bg-primary">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-                {% if request.user.is_authenticated %}
+        <div class="collapse navbar-collapse justify-content-center"id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'home' %}">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'categories' %}">Food</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'about' %}">About Us</a>
+            </li>
+            {% if request.user.is_authenticated %}
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Profile
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="{% url 'profile' %}">Manage Profile</a></li>
+                  <li><a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a></li>
                   {% if request.user.is_superuser %}
-                    <li class="nav-item">
-                      <a class="nav-link" href="{% url 'add_product' %}">Product Management</a>
-                    </li>
+                  <li><a class="dropdown-item" href="{% url 'add_product' %}">Manage Products</a></li>
                   {% endif %}
-                  <li class="nav-item">
-                    <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="{% url 'profile' %}">My Profile</a>
-                  </li>
-                {% else %}
+                </ul>
+              </li>
+              {% else %}
+              <li class="nav-item">
+                  <a class="nav-link" href="{% url 'account_login' %}">Login</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="{% url 'account_signup' %}">Sign Up</a>
+              </li>
+            {% endif %}
 
-                  <li class="nav-item">
-                      <a class="nav-link" href="{% url 'account_login' %}">Login</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="{% url 'account_signup' %}">Sign Up</a>
-                  </li>
-                {% endif %}
-
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'view_basket' %}"><iconify-icon inline icon="fluent-emoji-high-contrast:basket" style="color: black;"></iconify-icon> Basket 
-                      {% if basket_items %}
-                        <span class="basket-items-count">&#40;{{ request.session.basket.keys | length }}&#41;</span>
-                      {% endif %}
-                    </a>
-                </li>
-              </ul>
-            </div>
-          </div>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'view_basket' %}"><iconify-icon inline icon="fluent-emoji-high-contrast:basket" style="color: black;"></iconify-icon> Basket 
+                  {% if basket_items %}
+                    <span class="basket-items-count">&#40;{{ request.session.basket.keys | length }}&#41;</span>
+                  {% endif %}
+                </a>
+            </li>
+          </ul>
         </div>
       </nav>
       

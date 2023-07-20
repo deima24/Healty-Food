@@ -5,8 +5,7 @@
         "name": "VIOLIFE COCOSPREAD PANCAKES",
         "description": "Looking for an indulgent breakfast or brunch? These Cocospread pancakes by Violife are the ultimate treat. Serves: 4 ",
         "price": "5.99",
-        "is_meat_free": true,
-        "ingredients": "1 pack Violife Cocospread. 250 grams self-rising flour. 2 tbsp sugar. 2 tbsp baking powder. 1 tsp salt.300g coconut milk. 2 tbsp apple cider vinegar. 2 tsp vanilla. 4 tbsp coconut cream. 4 tbsp organic coconut oil. Strawberries, sliced.Banana, sliced.Raspberries.",
+        "ingredients": "Pack Violife Cocospread, self-rising flour, sugar, baking powder, salt, coconut milk, apple cider vinegar, vanilla, coconut cream, organic coconut oil, Strawberries, sliced Banana, sliced Raspberries.",
         "image": "VIOLIFE-COCOSPREAD-PANCAKES.png"
     }
 },
@@ -16,10 +15,9 @@
     "model": "products.product",
     "fields": {
         "name": "SWEET POTATO BEAN BURGERS WITH MAPLE DIJON SAUCE",
-        "description": "These sweet potato and chickpea burgers are sure to be a family favourite in no time. 4 burgers",
+        "description": "These sweet potato and chickpea burgers are sure to be a family favourite in no time.",
         "price": "12.99",
-        "is_meat_free": true,
-        "ingredients": "0.5 tbsp ground flaxseed. 1.5 tbsp water. 1 1/3 cup cooked sweet potato. 1 cup canned chickpeas, drained and rinsed. 2 tbsp dry quick oats. 2 tbsp + 1/3 cup (divided) bread crumbs regular, panko, whole wheat or gluten-free all work. 1-2 tbsp finely chopped white or yellow onion. 3/4 tsp each of cinnamon, chilli powder, garlic powder and salt.",
+        "ingredients": "Ground flaxseed, water, cooked sweet potato, canned chickpeas, dry quick oats, bread crumbs, panko, whole wheat or gluten-free, finely chopped white or yellow onion, cinnamon, chilli powder, garlic powder and salt.",
         "image": "SWEET-POTATO-BEAN-BURGERS.png"
     }
 },
@@ -30,8 +28,7 @@
         "name": "ROASTED PUMPKIN MACARONI",
         "description": "This warming dish is the ultimate plant-based comfort food.",
         "price": "7.99",
-        "is_meat_free": true,
-        "ingredients": "1 butternut squash (around 1 kg). 2 tbsp lemon juice. 75g grated vegan parmesan (or 15g Nutritional yeast flakes). 0.5 tsp powered garlic. 1 tsp. mustard powder. 1 tsp. grated nutmeg. 300ml Alpro Oat Unsweetened drink. 2 tbsp extra virgin olive oil, plus a little extra for oiling the squash. 1 bunch of sage. 100g hazelnuts, roughly chopped. 400g macaroni. Salt and pepper.",
+        "ingredients": "Butternut squash, lemon juice, grated vegan parmesan (or Nutritional yeast flakes), powered garlic, mustard powder, grated nutmeg, Alpro Oat Unsweetened drink, extra virgin olive oil, bunch of sage, hazelnuts, macaroni, Salt and pepper.",
         "image": "ROASTED-PUMPKIN-MACARONI.png"
     }
 },
@@ -42,8 +39,7 @@
         "name": "VEGAN CHICKEN NUGGETS",
         "description": "The perfect vegan treat and it's super high in protein as well!",
         "price": "5.99",
-        "is_meat_free": true,
-        "ingredients": "400g firm tofu. 80g chickpea flour. 5 tbsp nutritional yeast. 3 tbsp American mustard. Juice of 1/2 lemon. 2 tbsp olive oil. 1 1/2 tsp salt. 1 tsp garlic powder. 1 tsp onion powder. Cracked black pepper. Ketchup.",
+        "ingredients": "Firm tofu, chickpea flour, nutritional yeast, American mustard, Juice of lemon, olive oil, salt, garlic powder, onion powder, cracked black pepper, ketchup.",
         "image": "VEGAN-CHICKEN-NUGGETS.png"
     }
 },
@@ -54,8 +50,7 @@
         "name": "Herb and Garlic Baked Chicken. Serves: 2",
         "description": "If your baked chicken breast tends to turn out boring and bland, then you have to try this Garlic Herb Baked Chicken Breast. It's basically like the most delicious homemade garlic bread but made with chicken instead of bread. It's tender, juicy, has tons of herby-garlicky flavor, and it's ridiculously easy. Plus, it's quite versatile.",
         "price": "7.59",
-        "is_meat_free": false,
-        "ingredients": "4 skinless chicken breasts, trimmed of all fat. A handful of chopped herbs such as tarragon, sage, parsley. 3 garlic cloves crushed. Oil and water spray. 600-650g stir fried vegetables (choose from onions, peppers, mushrooms, shredded cabbage, lightly boiled vegetable batons, canned kidney beans).",
+        "ingredients": "4 skinless chicken breasts, trimmed of all fat, a handful of chopped herbs such as tarragon, sage, parsley, garlic cloves crushed, oil and water spray, fried vegetables.",
         "image": "Herb-and-Garlic-Baked-Chicken.png"
     }
 },
@@ -66,8 +61,7 @@
         "name": "Chicken kebabs with garlic sauce and pickles",
         "description": "Kebabs can be very unhealthy packed full of creamy sauces, fatty meat and normally served with chips. Not this one. It's made from lightly spiced lean chicken and served with low fat garlic sauce and pickles to give it that extra twist.",
         "price": "6.99",
-        "is_meat_free": false,
-        "ingredients": "2 x cloves of garlic, peeled and chopped. 1 tbsp of olive oil. A pinch of smoked paprika. White pepper. 2 x chicken breasts cut into 2cm strips. 150g 0% fat Greek yoghurt. 1 clove of garlic, peeled and finely chopped. 1 tbsp chopped flat-leaf parsley. Squeeze of lemon juice. 2 large wholemeal wraps. 4 leaves of lettuce. 2 small vine tomatoes, quartered. 1/2 small red onion, finely sliced. A dash of tabasco.",
+        "ingredients": "Cloves of garlic, peeled and chopped, olive oil, smoked paprika, white pepper, chicken breasts, 0% fat Greek yoghurt, garlic, flat-leaf parsley, lemon juice, wholemeal wraps, lettuce, tomatoes, red onion, dash of tabasco.",
         "image": "Chicken-kebabs-with-garlic-sauce-and-pickles.png"
     }
 },
@@ -75,11 +69,10 @@
     "pk": 7,
     "model": "products.product",
     "fields": {
-        "name": "Garlic chicken. Serves: 2",
+        "name": "Garlic chicken",
         "description": "Simple, delicious, tasty what could be better for a mid-week treat. We use chicken breast because once the skin is removed it is particularly low in fat.",
         "price": "4.95",
-        "is_meat_free": false,
-        "ingredients": "2 x 4oz chicken breasts, Pinch of dried parsley, 0.5 teaspoon Rajah garlic paste, 1/4 teaspoon salt, Vegetable oil spray",
+        "ingredients": "2 x 4oz chicken breasts, pinch of dried parsley, Rajah garlic paste, salt, vegetable oil spray",
         "image": "Garlic-chicken.png"
     }
 },
@@ -90,8 +83,7 @@
         "name": "Chicken, Leek and Mushroom Pie",
         "description": "Comfort food doesn't have to mean high fat, this heart-healthy pie uses thinly sliced potatoes to give a golden, crispy topping that's also low in saturated fat.",
         "price": "7.99",
-        "is_meat_free": false,
-        "ingredients": "200g chestnut mushrooms, 200g button mushrooms, 500ml low-salt chicken stock, 2 chicken breasts diced, 1 leek, chopped, 1 onion diced, 500g potatoes, 2 tsp olive oil, 30g plain flour, 3-4 stems tarragon, 1 bay leaf",
+        "ingredients": "Chestnut mushrooms,button mushrooms, low-salt chicken stock, chicken breasts diced, leek, onion diced, potatoes, olive oil, plain flour, tarragon, bay leaf",
         "image": "Chicken-Leek-and-Mushroom-Pie.png"
     }
 },
@@ -102,8 +94,7 @@
         "name": "Balsamic-Glazed Pork with Roasted Butternut Squash",
         "description": "Make a quick pan sauce of balsamic vinegar, honey and fresh thyme to top off juicy pork tenderloin.",
         "price": "7.99",
-        "is_meat_free": false,
-        "ingredients": "1 red onion thinly sliced, 1 lb. cubed butternut squash, 2 tbsp. olive oil divided, Kosher salt and pepper, 4 6-oz portions pork tenderloin, 1/4 c. plus 1 Tbsp balsamic vinegar divided, 2 tbsp. honey, 4 sprigs thyme, 4 c. baby arugula.",
+        "ingredients": "Red onion thinly sliced, butternut squash, olive oil, Kosher salt and pepper, 4 6-oz portions pork tenderloin, balsamic vinegar, honey, thyme, baby arugula.",
         "image": "Balsamic-Glazed-Pork-with-Roasted-Butternut-Squash.png"
     }
 },
@@ -114,8 +105,7 @@
         "name": "Fiery Pork Lettuce Wraps",
         "description": "Season pork tenderloin with gochujang, soy sauce, lime juice, sugar, and sesame oil for a fast and flavorful main you can eat with your hands.",
         "price": "4.99",
-        "is_meat_free": false,
-        "ingredients": "2 tbsp. gochujang, 1 tbsp. reduced-sodium soy sauce, 1 tbsp. fresh lime juice, 1/2 tbsp. packed brown sugar, 1 tsp. toasted sesame oil, 1 tbsp. olive oil, Kosher salt and pepper, 1 1-pound pork tenderloin trimmed, Gem or baby romaine lettuce leaves, Cooked rice; sliced radishes, cucumber, scallions and chiles; and fresh cilantro and mint leaves, for serving.",
+        "ingredients": "Gochujang, reduced-sodium soy sauce, fresh lime juice, packed brown sugar, toasted sesame oil, olive oil, Kosher salt and pepper, pork tenderloin trimmed, Gem or baby romaine lettuce leaves, cooked rice, sliced radishes, cucumber, scallions and chiles.",
         "image": "Fiery-Pork-Lettuce-Wraps.png"
     }
 },
@@ -126,8 +116,7 @@
         "name": "Grilled Chicken Skewers and Kale Caesar",
         "description": "Serve simple grilled chicken skewers with a creamy, garlicky kale caesar salad for a light summer meal.",
         "price": "9.99",
-        "is_meat_free": false,
-        "ingredients": "2 lemons, 1 1/2 lb. boneless skinless chicken breasts, Kosher salt and pepper, 8 thick slices baguette, 1 clove garlic halved plus 1/2 small clove garlic finely grated, 1 large egg yolk, 1/2 tsp. Dijon mustard, 1/3 c. olive oil, 1/4 c. grated Parmesan, 5 oz. baby kale.",
+        "ingredients": "Lemons, boneless skinless chicken breasts, Kosher salt and pepper, 8 thick slices baguette, clove garlic, large egg yolk, Dijon mustard, olive oil, grated Parmesan, baby kale.",
         "image": "Grilled-Chicken-Skewers-and-Kale-Caesar.png"
     }
 },
@@ -138,8 +127,7 @@
         "name": "Korean Pineapple Beef Lettuce Wraps",
         "description": "Just think of these lettuce cups as a vehicle to get all that delicious caramelized beef into your mouth.",
         "price": "10.99",
-        "is_meat_free": false,
-        "ingredients": "1/4 c. pineapple juice, 1 clove garlic grated, 2 tbsp. low-sodium soy sauce, red pepper flakes, grated fresh ginger, honey, toasted sesame oil, sirloin, canola oil, Kosher salt, Lettuce leaves, cooked sticky rice, scallions, red chiles, and chopped peanuts for serving.",
+        "ingredients": "Pineapple juice, clove garlic grated, low-sodium soy sauce, red pepper flakes, grated fresh ginger, honey, toasted sesame oil, sirloin, canola oil, Kosher salt, Lettuce leaves, cooked sticky rice, scallions, red chiles, and chopped peanuts.",
         "image": "Korean-Pineapple-Beef-Lettuce-Wraps.png"
     }
 }]
