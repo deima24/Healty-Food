@@ -2,11 +2,54 @@ from django.db import models
 import uuid
 from django.db.models import Sum
 from products.models import Product
-from django_countries.fields import CountryField
+
 from profiles.models import UserProfile
 
 
 # Create your models here.
+
+Avon = 'Avon'
+Bedfordshire = 'Bedfordshire'
+Berkshire = 'Berkshire'
+Cambridgeshire = 'Cambridgeshire'
+Buckinghamshire = 'Buckinghamshire'
+Cheshire = 'Cheshire'
+Cornwall = 'Cornwall'
+Cumbria = 'Cumbria'
+Derbyshire = 'Derbyshire'
+Devon = 'Devon'
+Dorset = 'Dorset'
+Durham = 'Durham'
+Essex = 'Essex'
+Gloucestershire = 'Gloucestershire'
+Hampshire = 'Hampshire'
+Herefordshire = 'Herefordshire'
+Hertfordshire = 'Hertfordshire'
+Kent = 'Kent'
+Lancashire = 'Lancashire'
+
+
+COUNTIES = [
+    (Avon, 'Avon'),
+    (Bedfordshire, 'Bedfordshire'),
+    (Berkshire, 'Berkshire'),
+    (Cambridgeshire, 'Cambridgeshire'),
+    (Buckinghamshire, 'Buckinghamshire'),
+    (Cheshire, 'Cheshire'),
+    (Cornwall, 'Cornwall'),
+    (Cumbria, 'Cumbria'),
+    (Derbyshire, 'Derbyshire'),
+    (Devon, 'Devon'),
+    (Dorset, 'Dorset'),
+    (Durham, 'Durham'),
+    (Essex, 'Essex'),
+    (Gloucestershire, 'Gloucestershire'),
+    (Hampshire, 'Hampshire'),
+    (Herefordshire, 'Herefordshire'),
+    (Hertfordshire, 'Hertfordshire'),
+    (Kent, 'Kent'),
+    (Lancashire, 'Lancashire'),
+]
 
 
 class Order(models.Model):
@@ -21,8 +64,8 @@ class Order(models.Model):
     town_or_city = models.CharField(max_length=40, null=False, blank=False)
     street_address1 = models.CharField(max_length=80, null=False, blank=False)
     street_address2 = models.CharField(max_length=80, null=True, blank=True)
-    county = CountryField(
-        blank_label='Country *', null=True, blank=True,)
+    county = models.CharField(
+        max_length=80, null=True, blank=True, choices=COUNTIES)
     date = models.DateTimeField(auto_now_add=True)
     delivery_cost = models.DecimalField(
         max_digits=6, decimal_places=2, null=False, default=0)

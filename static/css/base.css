@@ -101,11 +101,16 @@ h6 {
 
 
 .product-img,
-.category-img {
+.category-img,
+.basket-img {
     
     width: 180px; 
     height: 180px;
+}
 
+.detail-img {
+    width: 25%; 
+    height: 25%;
 }
 
 .about-title {
@@ -129,5 +134,20 @@ h6 {
     top: 72px;
     right: 15px;
     z-index: 9999;
+}
+
+.btn-colour-bg {
+    border: 2px solid;
+    background-color: #1E90FF;
+}
+
+.btn-white-bg {
+    background-color: #F8F8FF;
+    border: 2px solid;
+}
+
+.btn-colour-bg:hover,
+.btn-white-bg:hover {
+    background-color: #7CFC00;
 }
 
