@@ -27,9 +27,9 @@ SECRET_KEY = 'django-insecure-%94nnj#ba4^)q940tqvw&yq)_q9d-%u=-ukme4s+xpohbda29n
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-deima24-healtyfood-94m7gjplw48.ws-eu101.gitpod.io']
+ALLOWED_HOSTS = ['8000-deima24-healtyfood-94m7gjplw48.ws-eu102.gitpod.io']
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-deima24-healtyfood-94m7gjplw48.ws-eu101.gitpod.io']
+CSRF_TRUSTED_ORIGINS = ['https://8000-deima24-healtyfood-94m7gjplw48.ws-eu102.gitpod.io']
 
 
 # Application definition
