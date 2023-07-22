@@ -4,75 +4,45 @@
 {% load crispy_forms_tags %}
 
 
-{% block page_header %}
-<div class="container header-container">
-    <div class="row">
-        <div class="col"></div>
-    </div>
-</div>
-{% endblock %}
+
 
 {% block content %}
-<div class="background_change"></div>
+
 <div class="container">
     <h1 class="mt-5 text-center font-weight-bold ">Customer Product Reviews</h1>
     <a type="button" class="btn btn-outline-primary btn-sm"
-                        href="{% url 'make_review' %}">Edit</a>  
+                        href="{% url 'make_review' %}">Create Review</a>  
     <hr>
-    <div class="row">        
+    <div class="col">        
         {% if not reviewed %}
         <h2 class="text-center ">There are no reviews</h2>
         {% else %}
         {% for review in reviewed %}
-        <div class="col-xs-12 col-md-4">
+        <div class="col-xs-12 col-md-12">
             <div class="card grow shadow mb-2">
-                <img class="card-img-top" src=" {{ review.product.image.url }}" alt="{{ review.product.name }}"
-                    style="height: 300px;">
+                
                 <div class="card-body">
                     <h5 class="card-title">{{ review.product.name }}</h5>
                     <hr>
-                    <p class="card-text">Review: {{ review.review |truncatechars:30}}</p>
-                    <p class="text-capitalize"><small>Review by: {{ review.user }} -
+                    <p class="card-text">{{ review.review }}</p>
+                    <p class="text-capitalize"><small>Created On: {{ review.user }} -
                             {{ review.created_on | date:"D d M Y"}} </small></p>                    
                     {% if request.user == review.user %}
                     <a type="button" class="btn btn-outline-primary btn-sm"
-                        href="{% url 'edit_review' review.id %}">Edit</a>                    
-                    <button type="button" class="btn btn-danger btn-sm" data-toggle="modal"
-                        data-target="#exampleModal-{{ review.id}}">delete</button>
+                        href="{% url 'edit_review' review.id %}">Edit</a>    
+                    <a type="button" class="btn btn-outline-danger btn-sm" href="{% url 'delete_items' review.id %}"><small>Remove</small></a>                
+                    
                     {% elif request.user.is_superuser %}                   
-                    <button type="button" class="btn btn-danger btn-sm" data-toggle="modal"
-                        data-target="#exampleModal-{{ review.id}}">delete</button>
+                    <a type="button" class="btn btn-outline-primary btn-sm"
+                        href="{% url 'edit_review' review.id %}">Edit</a> 
+                    <a type="button" class="btn btn-outline-danger btn-sm" href="{% url 'delete_items' review.id %}"><small>Remove</small></a>
                     {% else %}
                     <p></p>
                     {% endif %}                   
                 </div>
             </div>
         </div>        
-        <!-- Modal for confirmation of delete -->
-        <div class="modal fade" id="exampleModal-{{ review.id}}" tabindex="-1" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModals"><i class="fa-solid fa-trash"></i>&nbsp;&nbsp;
-                            Delete
-                            Confirmation</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body text-center">
-                        <span class="text-danger"><i class="fa-solid fa-trash fa-2x"></i></span>
-                        <div class="text-danger" style="height: 30px;">Are you sure you want
-                            to delete ?</div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cancel</button>
-                        <a class="btn btn-outline-danger btn-sm" href="{% url 'delete_items' review.id %}">Delete</a>
-                    </div>
-                </div>
-            </div>
-        </div>       
+        
         {% endfor %}
         {% endif %}
     </div>

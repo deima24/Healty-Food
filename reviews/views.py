@@ -45,6 +45,7 @@ def show_review(request):
         'reviews': reviews,
         'reviewed': reviewed,
     }
+
     return render(request, 'reviews/show_review.html', context)
 
 
