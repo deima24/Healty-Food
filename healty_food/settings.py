@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import os
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -21,13 +22,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-%94nnj#ba4^)q940tqvw&yq)_q9d-%u=-ukme4s+xpohbda29n'
+SECRET_KEY = os.environ.get('SECRET_KEY')
+#'django-insecure-%94nnj#ba4^)q940tqvw&yq)_q9d-%u=-ukme4s+xpohbda29n'
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-deima24-healtyfood-94m7gjplw48.ws-eu102.gitpod.io']
+ALLOWED_HOSTS = ['localhost',
+    'healty_food.herokuapp.com',]
 
 CSRF_TRUSTED_ORIGINS = ['https://8000-deima24-healtyfood-94m7gjplw48.ws-eu102.gitpod.io']
 
@@ -129,12 +132,17 @@ WSGI_APPLICATION = 'healty_food.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
 
 
 # Password validation
