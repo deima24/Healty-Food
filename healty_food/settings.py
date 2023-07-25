@@ -30,7 +30,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = ['localhost',
-    'healty_food.herokuapp.com',]
+    'healthy-food-pp5.herokuapp.com',]
 
 CSRF_TRUSTED_ORIGINS = ['https://8000-deima24-healtyfood-94m7gjplw48.ws-eu102.gitpod.io']
 
