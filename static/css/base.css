@@ -149,3 +149,27 @@ h6 {
     background-color: #7CFC00;
 }
 
+@media (max-width: 320px) {
+    .order-cook-deliver {
+        justify-content: unset;
+        flex-direction: column; 
+        margin: 0;
+    }
+    .category-container,
+    .card-container {
+        flex-direction: column;
+    }
+    .category-card {
+        margin-left: 55px;
+    }
+    .card-container {
+        flex-direction: row;
+    }
+    .product-card,
+    .category-card {
+        margin-bottom: 30px;
+    }
+    .select {
+        width: 100%;
+    }
+}
