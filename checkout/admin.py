@@ -3,9 +3,11 @@ from .models import Order, OrderLineItem
 
 # Register your models here.
 
+
 class OrderLineItemAdminInline(admin.TabularInline):
     model = OrderLineItem
     readonly_fields = ('lineitem_total',)
+
 
 class OrderAdmin(admin.ModelAdmin):
 
@@ -25,7 +27,7 @@ class OrderAdmin(admin.ModelAdmin):
     list_display = ('order_number', 'date', 'full_name',
                     'order_total', 'delivery_cost',
                     'grand_total',)
-    
+
     ordering = ('-date',)
 
 

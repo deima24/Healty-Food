@@ -1,4 +1,6 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
+from django.shortcuts import ( 
+    render, redirect, reverse, get_object_or_404, HttpResponse
+)
 from django.contrib import messages
 from .forms import OrderForm
 from basket.contexts import basket_contents
@@ -28,7 +30,6 @@ def cache_checkout_data(request):
         messages.error(request, 'Sorry, your payment cannot be \
             processed right now. Please try again later.')
         return HttpResponse(content=e, status=400)
-
 
 
 def checkout(request):
@@ -84,7 +85,7 @@ def checkout(request):
 
     else:
 
-        basket = request.session.get('basket',{})
+        basket = request.session.get('basket', {})
         if not basket:
             messages.error(request, "Your basket is currently empty.")
             return redirect(reverse('categories'))
@@ -164,10 +165,8 @@ def checkout_success(request, order_number):
         Your order number is {order_number}. A confirmation \
         email will be sent to {order.email}.')
 
-
     if 'basket' in request.session:
         del request.session['basket']
-
 
     template = 'checkout/checkout_success.html'
     context = {

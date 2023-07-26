@@ -6,6 +6,7 @@ from .forms import ProductForm
 
 # Create your views here.
 
+
 def all_categories(request):
     """ A view to categories """
 
@@ -14,8 +15,9 @@ def all_categories(request):
     context = {
         'categories': categories,
     }
-    
+
     return render(request, 'products/categories.html', context)
+
 
 def products(request):
     """
@@ -77,6 +79,7 @@ def add_product(request):
 
     return render(request, template, context)
 
+
 @login_required
 def edit_product(request, product_id):
     """ Edit a product in the store """
@@ -108,6 +111,7 @@ def edit_product(request, product_id):
     }
 
     return render(request, template, context)
+
 
 @login_required
 def delete_product(request, product_id):

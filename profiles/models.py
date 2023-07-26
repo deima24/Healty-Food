@@ -48,6 +48,7 @@ COUNTIES = [
     (Lancashire, 'Lancashire'),
 ]
 
+
 class UserProfile(models.Model):
     """
     A user profile model for maintaining default
@@ -67,9 +68,10 @@ class UserProfile(models.Model):
     default_county = models.CharField(
         max_length=80, null=True, blank=True,
         choices=COUNTIES)
-    
+
     def __str__(self):
         return self.user.username
+
 
 @receiver(post_save, sender=User)
 def create_or_update_user_profile(sender, instance, created, **kwargs):

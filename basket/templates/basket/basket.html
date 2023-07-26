@@ -22,15 +22,11 @@
 
                         <tr>
                             <td class="w-25">
-                                {% if item.product.image %}
-                                    <img class="basket-img" src="{{ item.product.image.url }}" alt="{{ item.product.breed }}">
-                                {% else %}
-                                    <img class="basket-img" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.breed }}">
-                                {% endif %}
+                                {% include "basket/product-image.html" %}
                                 
                             </td>
-                            <td>{{ item.product.price }}</td>
-                            <td>{{ item.quantity }}</td>
+                            <td>{% include "basket/product-price.html" %}</td>
+                            <td>{% include "basket/product-quantity.html" %}</td>
                             <td>{{ item.product.price | calc_subtotal:item.quantity }}</td>
                             <td>
                                 <form class="form update-form" method="POST" action="{% url 'adjust_basket' item.item_id %}">
@@ -69,7 +65,7 @@
                         {% endfor %}
 
                         <tr>
-                            <td>Basket Total: £ {{ total | floatformat:2 }}</td>
+                            
                             <td>Delivery Cost: £ {{ delivery | floatformat:2 }}</td>
                             <td>Grand Total: £ {{ grand_total | floatformat:2 }}</td>
                         </tr>
