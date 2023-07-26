@@ -149,6 +149,12 @@ h6 {
     background-color: #7CFC00;
 }
 
+.signup {
+    
+    
+}
+
+
 @media (max-width: 320px) {
     .order-cook-deliver {
         justify-content: unset;
@@ -172,4 +178,15 @@ h6 {
     .select {
         width: 100%;
     }
+    .navbar-toggler {
+        border: solid 1px;
+    }
+    .detail-img {
+        width: 60%;
+        height: 60%;
+    }
+    .detail-list {
+        margin: 0;
+    }
+    
 }
