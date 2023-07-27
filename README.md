@@ -66,3 +66,115 @@ All CRUD functionality is placed intuitively with the relevant features of the s
 ### Skeleton
 
   Puts features defined in structure into navigational elements. For a first outline of the project skeleton see Wireframes. To guarantee intuitive navigation of the site, both the navbar and the main content follow a standard layout pattern that should be familiar to most users. The navbar provides links to the main features and functions of the site, varying based on whether a user is authenticated or not. On small to medium screen sizes a drop-down menu takes the place of the full navbar. The shopping basket link in the navbar is being updated everytime a user adds an item (of a differnt type!) to the basket. A footer with social media links.
+
+# Features
+
+### Existing Features
+
+Navigation
+
+Responsive navbar with dropdown menu
+Navigation options dependant of user authentication/authorisation
+
+Home page
+
+Home page with banner image and introduction
+Order Now button 
+
+About page
+
+Contact info incl. address, phone number and email
+Shop opening hours
+Info about Healthy food
+
+Sign Up
+
+Allows new users to create account
+Sign up process includes confirmation email with confirmation link
+
+Login
+
+Allows existing users to log into their account
+Includes Remember me checkbox and Forgot Password option
+
+Logout
+
+Allows authenticated users to securely log out of their account
+
+Category page
+
+Lists all categories of products
+
+Products page (of same category)
+
+* Lists all products of the same category
+* Quick link to category page
+
+Product details page
+
+* Product image, description and price
+* Quick link to respective category
+* Quantity input
+* Continue Shopping button ("Browse more")
+* Add to basket button
+* Edit and delete option for authorised users for each product
+
+Add Product page
+
+* Authorised admin users only!
+* Complete product form with image upload option
+* Cancel button
+* Add product button to add product to database
+
+Edit Product page
+
+* Authorised admin users only!
+* Complete product form with image upload option
+* Form is pre-populated with existing product's details
+* Cancel button
+* Update product button to update existing product in database
+
+Delete Product option
+
+* Authorised admin users only!
+* Option on product details page
+* Delete button to delete existing product from database
+
+Reviews Page
+
+* Gives option to select the title to which product you want to give review
+* Shows creatted date review owner can delete or edit it
+
+Shopping Basket
+
+* Live update of basket status in navbar
+* Counter in nav element displays only the number of different products, not the total of all products.
+
+Shopping Basket
+
+*  View of currently selected products and their quantity
+*  Quantity adjustment option
+*  Product removal option
+*  Display delivery cost (currently always 0) and grand total
+*  Continue shopping button
+*  Proceed to checkout option
+
+Checkout page
+
+* Checkout form, including sections for personal info, contact details and card details
+* Option to save details to profile for authenticated users
+* Current order summery
+* Edit Basket button
+* Pay now button
+
+Checkout Success page
+
+* Confirms successfull order and informs user that email was sent to the address specified
+* Displays order details, contact and billing info
+* Continue Shopping button ("Back to products")
+
+Profile
+
+* Contact address form (pre-populated if user has previously saved his info)
+* Update Info button
+* Listing of past orders in order history
