@@ -29,10 +29,10 @@ SECRET_KEY = os.environ.get('SECRET_KEY' , 'django-insecure-%94nnj#ba4^)q940tqvw
 DEBUG = True
 
 ALLOWED_HOSTS = ['localhost',
-    'healthy-food-pp5.herokuapp.com',
+    'healthy-food-pp5-5332948976f5.herokuapp.com',
     '8000-deima24-healtyfood-a2ekr5n3szr.ws-eu102.gitpod.io']
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-deima24-healtyfood-a2ekr5n3szr.ws-eu102.gitpod.io', 'https://healthy-food-pp5.herokuapp.com']
+CSRF_TRUSTED_ORIGINS = ['https://8000-deima24-healtyfood-a2ekr5n3szr.ws-eu102.gitpod.io', 'https://healthy-food-pp5-5332948976f5.herokuapp.com']
 
 
 # Application definition
