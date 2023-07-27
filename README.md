@@ -71,46 +71,46 @@ All CRUD functionality is placed intuitively with the relevant features of the s
 
 ### Existing Features
 
-Navigation
+## Navigation
 
-Responsive navbar with dropdown menu
-Navigation options dependant of user authentication/authorisation
+* Responsive navbar with dropdown menu
+* Navigation options dependant of user authentication/authorisation
 
-Home page
+## Home page
 
-Home page with banner image and introduction
-Order Now button 
+* Home page with banner image and introduction
+* Order Now button 
 
-About page
+## About page
 
-Contact info incl. address, phone number and email
-Shop opening hours
-Info about Healthy food
+* Contact info incl. address, phone number and email
+* Shop opening hours
+* Info about Healthy food
 
-Sign Up
+## Sign Up
 
-Allows new users to create account
-Sign up process includes confirmation email with confirmation link
+* Allows new users to create account
+* Sign up process includes confirmation email with confirmation link
 
-Login
+## Login
 
-Allows existing users to log into their account
-Includes Remember me checkbox and Forgot Password option
+* Allows existing users to log into their account
+* Includes Remember me checkbox and Forgot Password option
 
-Logout
+## Logout
 
-Allows authenticated users to securely log out of their account
+* Allows authenticated users to securely log out of their account
 
-Category page
+## Category page
 
-Lists all categories of products
+* Lists all categories of products
 
-Products page (of same category)
+## Products page (of same category)
 
 * Lists all products of the same category
 * Quick link to category page
 
-Product details page
+## Product details page
 
 * Product image, description and price
 * Quick link to respective category
@@ -119,14 +119,14 @@ Product details page
 * Add to basket button
 * Edit and delete option for authorised users for each product
 
-Add Product page
+## Add Product page
 
 * Authorised admin users only!
 * Complete product form with image upload option
 * Cancel button
 * Add product button to add product to database
 
-Edit Product page
+## Edit Product page
 
 * Authorised admin users only!
 * Complete product form with image upload option
@@ -134,23 +134,23 @@ Edit Product page
 * Cancel button
 * Update product button to update existing product in database
 
-Delete Product option
+## Delete Product option
 
 * Authorised admin users only!
 * Option on product details page
 * Delete button to delete existing product from database
 
-Reviews Page
+## Reviews Page
 
 * Gives option to select the title to which product you want to give review
 * Shows creatted date review owner can delete or edit it
 
-Shopping Basket
+## Shopping Basket
 
 * Live update of basket status in navbar
 * Counter in nav element displays only the number of different products, not the total of all products.
 
-Shopping Basket
+## Shopping Basket
 
 *  View of currently selected products and their quantity
 *  Quantity adjustment option
@@ -159,7 +159,7 @@ Shopping Basket
 *  Continue shopping button
 *  Proceed to checkout option
 
-Checkout page
+## Checkout page
 
 * Checkout form, including sections for personal info, contact details and card details
 * Option to save details to profile for authenticated users
@@ -167,13 +167,13 @@ Checkout page
 * Edit Basket button
 * Pay now button
 
-Checkout Success page
+## Checkout Success page
 
 * Confirms successfull order and informs user that email was sent to the address specified
 * Displays order details, contact and billing info
 * Continue Shopping button ("Back to products")
 
-Profile
+## Profile
 
 * Contact address form (pre-populated if user has previously saved his info)
 * Update Info button
@@ -189,3 +189,36 @@ The shop has the potential to extend its product range by categories and even pr
 
 Add search option so the user could find food by puting it in the search bar.Currently the product selection is so small that a search bar was deemed unnecessary but would make sense to implement along with an extended product range.
 Leaving comment on the other people reviews.
+
+# Technologies Used
+
+## Work Environments and Hosting
+
+* Figma (Wireframes)
+* GitHub (Version control)
+* GitPod (IDE)
+* Heroku (Site hosting)
+* AWS - Amazon Web servises (S3) (Hosting static and media files)
+
+## Python Libraries
+
+* Gunicorn (Python HTTP server for WSGI applications)
+* boto3 (integrates python libraries with AWS services)
+* django-storages (collection of custom storage backends for Django)
+* Flake8 (Python linter used for python code validation)
+
+## Django Libraries
+
+* django-allauth (User authentication)
+* django-crispy-forms (Control rendering behaviour of Django forms)
+* Bootstrap5 template pack for django-crispy-forms
+
+## Payment processing
+
+* Stripe (Online payment platform)
+
+## Emails/Newsletter
+
+* Gmail (Real email sending)
+* Mailchimp (Automated newsletter subscription service)
+
