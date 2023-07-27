@@ -6,7 +6,8 @@
         "description": "Looking for an indulgent breakfast or brunch? These Cocospread pancakes by Violife are the ultimate treat. Serves: 4 ",
         "price": "5.99",
         "ingredients": "Pack Violife Cocospread, self-rising flour, sugar, baking powder, salt, coconut milk, apple cider vinegar, vanilla, coconut cream, organic coconut oil, Strawberries, sliced Banana, sliced Raspberries.",
-        "image": "VIOLIFE-COCOSPREAD-PANCAKES.png"
+        "image": "VIOLIFE-COCOSPREAD-PANCAKES.png",
+        "category": 1
     }
 },
 
@@ -18,7 +19,8 @@
         "description": "These sweet potato and chickpea burgers are sure to be a family favourite in no time.",
         "price": "12.99",
         "ingredients": "Ground flaxseed, water, cooked sweet potato, canned chickpeas, dry quick oats, bread crumbs, panko, whole wheat or gluten-free, finely chopped white or yellow onion, cinnamon, chilli powder, garlic powder and salt.",
-        "image": "SWEET-POTATO-BEAN-BURGERS.png"
+        "image": "SWEET-POTATO-BEAN-BURGERS.png",
+        "category": 1
     }
 },
 {
@@ -29,7 +31,8 @@
         "description": "This warming dish is the ultimate plant-based comfort food.",
         "price": "7.99",
         "ingredients": "Butternut squash, lemon juice, grated vegan parmesan (or Nutritional yeast flakes), powered garlic, mustard powder, grated nutmeg, Alpro Oat Unsweetened drink, extra virgin olive oil, bunch of sage, hazelnuts, macaroni, Salt and pepper.",
-        "image": "ROASTED-PUMPKIN-MACARONI.png"
+        "image": "ROASTED-PUMPKIN-MACARONI.png",
+        "category": 1
     }
 },
 {
@@ -40,7 +43,8 @@
         "description": "The perfect vegan treat and it's super high in protein as well!",
         "price": "5.99",
         "ingredients": "Firm tofu, chickpea flour, nutritional yeast, American mustard, Juice of lemon, olive oil, salt, garlic powder, onion powder, cracked black pepper, ketchup.",
-        "image": "VEGAN-CHICKEN-NUGGETS.png"
+        "image": "VEGAN-CHICKEN-NUGGETS.png",
+        "category": 1
     }
 },
 {
@@ -51,7 +55,8 @@
         "description": "If your baked chicken breast tends to turn out boring and bland, then you have to try this Garlic Herb Baked Chicken Breast. It's basically like the most delicious homemade garlic bread but made with chicken instead of bread. It's tender, juicy, has tons of herby-garlicky flavor, and it's ridiculously easy. Plus, it's quite versatile.",
         "price": "7.59",
         "ingredients": "4 skinless chicken breasts, trimmed of all fat, a handful of chopped herbs such as tarragon, sage, parsley, garlic cloves crushed, oil and water spray, fried vegetables.",
-        "image": "Herb-and-Garlic-Baked-Chicken.png"
+        "image": "Herb-and-Garlic-Baked-Chicken.png",
+        "category": 2
     }
 },
 {
@@ -62,7 +67,8 @@
         "description": "Kebabs can be very unhealthy packed full of creamy sauces, fatty meat and normally served with chips. Not this one. It's made from lightly spiced lean chicken and served with low fat garlic sauce and pickles to give it that extra twist.",
         "price": "6.99",
         "ingredients": "Cloves of garlic, peeled and chopped, olive oil, smoked paprika, white pepper, chicken breasts, 0% fat Greek yoghurt, garlic, flat-leaf parsley, lemon juice, wholemeal wraps, lettuce, tomatoes, red onion, dash of tabasco.",
-        "image": "Chicken-kebabs-with-garlic-sauce-and-pickles.png"
+        "image": "Chicken-kebabs-with-garlic-sauce-and-pickles.png",
+        "category": 2
     }
 },
 {
@@ -73,7 +79,8 @@
         "description": "Simple, delicious, tasty what could be better for a mid-week treat. We use chicken breast because once the skin is removed it is particularly low in fat.",
         "price": "4.95",
         "ingredients": "2 x 4oz chicken breasts, pinch of dried parsley, Rajah garlic paste, salt, vegetable oil spray",
-        "image": "Garlic-chicken.png"
+        "image": "Garlic-chicken.png",
+        "category": 2
     }
 },
 {
@@ -84,7 +91,8 @@
         "description": "Comfort food doesn't have to mean high fat, this heart-healthy pie uses thinly sliced potatoes to give a golden, crispy topping that's also low in saturated fat.",
         "price": "7.99",
         "ingredients": "Chestnut mushrooms,button mushrooms, low-salt chicken stock, chicken breasts diced, leek, onion diced, potatoes, olive oil, plain flour, tarragon, bay leaf",
-        "image": "Chicken-Leek-and-Mushroom-Pie.png"
+        "image": "Chicken-Leek-and-Mushroom-Pie.png",
+        "category": 2
     }
 },
 {
@@ -95,7 +103,8 @@
         "description": "Make a quick pan sauce of balsamic vinegar, honey and fresh thyme to top off juicy pork tenderloin.",
         "price": "7.99",
         "ingredients": "Red onion thinly sliced, butternut squash, olive oil, Kosher salt and pepper, 4 6-oz portions pork tenderloin, balsamic vinegar, honey, thyme, baby arugula.",
-        "image": "Balsamic-Glazed-Pork-with-Roasted-Butternut-Squash.png"
+        "image": "Balsamic-Glazed-Pork-with-Roasted-Butternut-Squash.png",
+        "category": 3
     }
 },
 {
@@ -106,7 +115,8 @@
         "description": "Season pork tenderloin with gochujang, soy sauce, lime juice, sugar, and sesame oil for a fast and flavorful main you can eat with your hands.",
         "price": "4.99",
         "ingredients": "Gochujang, reduced-sodium soy sauce, fresh lime juice, packed brown sugar, toasted sesame oil, olive oil, Kosher salt and pepper, pork tenderloin trimmed, Gem or baby romaine lettuce leaves, cooked rice, sliced radishes, cucumber, scallions and chiles.",
-        "image": "Fiery-Pork-Lettuce-Wraps.png"
+        "image": "Fiery-Pork-Lettuce-Wraps.png",
+        "category": 3
     }
 },
 {
@@ -117,7 +127,8 @@
         "description": "Serve simple grilled chicken skewers with a creamy, garlicky kale caesar salad for a light summer meal.",
         "price": "9.99",
         "ingredients": "Lemons, boneless skinless chicken breasts, Kosher salt and pepper, 8 thick slices baguette, clove garlic, large egg yolk, Dijon mustard, olive oil, grated Parmesan, baby kale.",
-        "image": "Grilled-Chicken-Skewers-and-Kale-Caesar.png"
+        "image": "Grilled-Chicken-Skewers-and-Kale-Caesar.png",
+        "category": 3
     }
 },
 {
@@ -128,6 +139,7 @@
         "description": "Just think of these lettuce cups as a vehicle to get all that delicious caramelized beef into your mouth.",
         "price": "10.99",
         "ingredients": "Pineapple juice, clove garlic grated, low-sodium soy sauce, red pepper flakes, grated fresh ginger, honey, toasted sesame oil, sirloin, canola oil, Kosher salt, Lettuce leaves, cooked sticky rice, scallions, red chiles, and chopped peanuts.",
-        "image": "Korean-Pineapple-Beef-Lettuce-Wraps.png"
+        "image": "Korean-Pineapple-Beef-Lettuce-Wraps.png",
+        "category": 3
     }
 }]
