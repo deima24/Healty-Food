@@ -178,3 +178,14 @@ Profile
 * Contact address form (pre-populated if user has previously saved his info)
 * Update Info button
 * Listing of past orders in order history
+
+## Possible Future Features
+
+### Extended product range
+
+The shop has the potential to extend its product range by categories and even products so the user would have more options to choose from.
+
+### Search option
+
+Add search option so the user could find food by puting it in the search bar.Currently the product selection is so small that a search bar was deemed unnecessary but would make sense to implement along with an extended product range.
+Leaving comment on the other people reviews.
