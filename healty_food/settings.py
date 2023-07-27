@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY'), 'django-insecure-%94nnj#ba4^)q940tqvw&yq)_q9d-%u=-ukme4s+xpohbda29n'
+SECRET_KEY = os.environ.get('SECRET_KEY' , 'django-insecure-%94nnj#ba4^)q940tqvw&yq)_q9d-%u=-ukme4s+xpohbda29n')
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -30,9 +30,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['localhost',
     'healthy-food-pp5.herokuapp.com',
-    '8000-deima24-healtyfood-gibeg3vj4ez.ws-eu102.gitpod.io']
+    '8000-deima24-healtyfood-a2ekr5n3szr.ws-eu102.gitpod.io']
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-deima24-healtyfood-gibeg3vj4ez.ws-eu102.gitpod.io']
+CSRF_TRUSTED_ORIGINS = ['https://8000-deima24-healtyfood-a2ekr5n3szr.ws-eu102.gitpod.io', 'https://healthy-food-pp5.herokuapp.com']
 
 
 # Application definition
