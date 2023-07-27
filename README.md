@@ -18,4 +18,19 @@ This project was designed and built using the agile approach. Right from the ini
 
 ## Wireframes
 
+The initial wireframes in Figma are an overly simplified version of the finished product and merely served the purpose of listing most of the site's essential features.
+Not all features and functions are covered by these first drafts.
+
 ![main-page](/media/main-page-fr.png)
+
+![category](/media/product-category-fr.png)
+
+![product](/media/products-fr.png)
+
+![reviews](/media/reviews-fr.png)
+
+![about](/media/about-fr.png)
+
+![signin-lonin](/media/sign-log-fr.png)
+
+![basket](/media/basket-fr.png)
