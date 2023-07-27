@@ -1,1 +1,1 @@
-web: gunicorn healthy_food.wsgi:application
+web: gunicorn healty_food.wsgi:application
