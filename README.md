@@ -1,8 +1,3 @@
-![reviews-fr](https://github.com/deima24/Healty-Food/assets/111892514/82d15ec3-9cb5-4564-96e6-a79b8043b0b6)
-![Uploading products-fr.png…]()
-![product-category-fr](https://github.com/deima24/Healty-Food/assets/111892514/0c9574d6-ab3a-4db8-b430-b619a06c3daf)
-![Uploading main-page-fr.png…]()
-![Uploading basket-fr.png…]()
 # Healty-Food
 
 This is the e-commerce application which is the last project to Code Institute portfolio projects.
@@ -23,5 +18,4 @@ This project was designed and built using the agile approach. Right from the ini
 
 ## Wireframes
 
-![Uploading about-fr.png…]()
-![Uploading sign-log-fr.png…]()
+![main-page](/media/main-page-fr.png)
