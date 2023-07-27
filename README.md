@@ -222,3 +222,100 @@ Leaving comment on the other people reviews.
 * Gmail (Real email sending)
 * Mailchimp (Automated newsletter subscription service)
 
+# Deployment
+
+This project was deployed using Heroku, ElephantSQL and AWS.
+The following steps outline all libraries needed for successful deployment on Heroku.
+
+* Install pyscopg2 (connects to PostgreSQL): pip 3 install dj_database_url pyscopg2
+* Install Gunicorn (server used to run Django on Heroku): pip3 install django gunicorn
+
+## Creating the Heroku App
+
+* Log into Heroku and go to the Dashboard
+* Click New and select Create new app from the drop-down
+* Name app appropriately and choose relevant region, then click Create App
+
+## Create PostgreSQL database using ElephantSQL
+
+This is necessary to create a database that can be accessed by Heroku. The database provided by Django can not be accessed by the deployed Heroku app.
+
+* Log into ElephantSQL and go to Dashboard
+* Click Create New Instance
+* Set up a plan by providing a Name (project name) and select a Plan (for this project the free plan "Tiny Turtle" was chosen). Tags are optional.
+* Click Select Region and choose appropriate Data center
+* Click Review, check all details and click Create Instance
+* Return to Dashboard on click on the name of the newly created instance
+* Copy the database URL from the details section
+
+## Preparing for Heroku
+
+* Create Procfile (tells Heroku to create web dyno which will run gunicorn and serve Django app)
+* Temporarily disable collectstatic (prevent Heroku from collecting static files when deploying)
+* Allow Heroku as host: In settings.py add ALLOWED_HOSTS = ['app-name.herokuapp.com', 'localhost']
+
+## Connecting Heroku to Database
+
+* In Heroku dashboard, go to Settings tab
+* Add three new config vars DATABASE_URL (value is database URL), SECRET_KEY (value is secret key string)
+
+## Deyploying with Heroku
+
+* In Heroku dashboard, go to Deploy tab
+* Select "GitHub" as Deployment method and choose correct repo
+* Enable Automatic Deploys
+* Click "Deploy Branch" button
+
+## Hosting images and static file with AWS
+
+* Create AWS account and go to AWS Management Console in the My Account dropdown
+* Find and access S3 as a service and create a new bucket:
+Under Object Ownership, check "ACLs enabled"
+Uncheck "Block all public access" and acknowledge (required for public access to static files)
+* Configur bucket settings:
+Under Properties, enable Static Website Hosting
+Under Permissions, copy the following code into CORS section:
+
+[
+    {
+        "AllowedHeaders": [
+            "Authorization"
+        ],
+        "AllowedMethods": [
+            "GET"
+        ],
+        "AllowedOrigins": [
+            "*"
+        ],
+        "ExposeHeaders": []
+    }
+]
+
+This is required to set up the access between the Heroku app and the S3 bucket.
+Under Bucket policy, go to Policy generator.
+Bucket Type = S3 Bucket Policy
+Principal = * (allows all principles)
+Actions = GetObject
+Paste in ARN from bucket settings tab.
+Click Add Statement, then Generate Policy.
+Copy policy in paste into bucket policy editor. Also add /* onto the end of the resource key.
+Click Save.
+Under Access control list (ACL), check "List" checkbox for "Everyone (public access)"
+
+* Create user to access bucket with IAM (Identity and Access Management)
+In IAM, got to User Groups (sidebar left).
+There create a group for a user, create an access policy giving the group access to the S3 bucket and assign the user to the group so it can use the policy to access all files.
+
+* Connect Django to S3
+Install packages "boto3" and "django-storages" and add 'storages' to INSTALLED_APPS in settings.py
+Configure settings.py accordingly, including necessary AWS variables.
+Add new config vars in Heroku app settings, including user credentials from AWS.
+Create custom_storages.py file.
+
+* Upload static files and media files to S3
+
+## Add Stripe keys to Heroku
+
+From Stripe account, under Developers > API keys copy Public Key and Secret Key and set as config vars in Heroku app settings.
+Create new Webhook endpoint for deployed site and enable all events. Then add Signing Secret to Heroku app config vars.
+
