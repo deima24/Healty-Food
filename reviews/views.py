@@ -1,82 +1,149 @@
 from django.shortcuts import render, redirect, get_object_or_404, reverse
 from django.views import View
-from .forms import ReviewForm
-from .models import Review
+from .forms import EntryForm, ResponseForm
+from .models import Entry, Response
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator
 
 
-@login_required
-def make_review(request):
+def entry_list(request):
     """
-    Enables logged on user to create a review.
+    Renders all forum entries
     """
-    if request.method == 'POST':
-        review = Review(user=request.user)
-        form = ReviewForm(request.POST, instance=review)
-        if form.is_valid():
-            form.save()
-            messages.success(
-                request, 'Review posted.'
-                )
-            return redirect('show_review')
+    entries = Entry.objects.all()
+    e_type = request.GET.get('entry_type')
+    filtered = False
 
-    else:
-        form = ReviewForm()
-        context = {
-            'form': form,
-            }
-    return render(request, 'reviews/make_review.html', context)
-
-
-def show_review(request):
-    """
-    Displays the reviews.
-    """
-    reviews = Review.objects.all()
-    # Set up pagination
-    p = Paginator(Review.objects.all(), 3)
-    page = request.GET.get('page')
-    reviewed = p.get_page(page)
+    if request.GET:
+        if 'entry_type' in request.GET:
+            e_type = request.GET.get('entry_type')
+            entries = entries.filter(entry_type__name=e_type)
+            filtered = True
 
     context = {
-        'reviews': reviews,
-        'reviewed': reviewed,
+        'entries': entries,
+        'selected_type': e_type,
+        'filtered': filtered
     }
 
-    return render(request, 'reviews/show_review.html', context)
+    return render(request, 'forum/forum.html', context)
 
 
-@login_required
-def delete_items(request, review_id):
-    """ Delete a review """
-    review = get_object_or_404(Review, pk=review_id)
-    review.delete()
-    messages.success(request, 'Review deleted!')
-    return redirect(reverse('show_review'))
-
-
-@login_required
-def edit_review(request, review_id):
+def entry_detail(request, slug):
     """
-    The review creater can edit the review.
+    Displays individual forum entry
     """
-    review = get_object_or_404(Review, pk=review_id)
+
+    entries = Entry.objects.all()
+    entry = get_object_or_404(Entry, slug=slug)
+    response = Response.objects.filter(entry=entry)
+    response_form = ResponseForm()
+    e_type = request.GET.get('entry_type')
+    filtered = False
+
+    if request.GET:
+        if 'entry_type' in request.GET:
+            e_type = request.GET.get('entry_type')
+            entries = entries.filter(entry_type__name=e_type)
+
+    # handle response form submission
     if request.method == 'POST':
-        form = ReviewForm(request.POST, instance=review)
+        response_form = ResponseForm(data=request.POST)
+        if response_form.is_valid():
+            response_form.instance.author = request.user.username
+            response = response_form.save(commit=False)
+            response.entry = entry
+            response.save()
+            messages.info(request, 'Your comment is awaiting approval.')
+            return redirect(reverse('entry_detail', args=[entry.slug]))
+        else:
+            messages.error(
+                request,
+                'Could not post your comment. Please ensure form is valid.')
+    else:
+        response_form = ResponseForm()
+
+    context = {
+        'response_form': response_form,
+        'entry': entry,
+        'responses': response,
+    }
+
+    return render(request, 'forum/entry_detail.html', context)
+
+
+@login_required
+def create_entry(request):
+    """ Create forum post """
+    if not request.user.is_superuser:
+        messages.error(
+            request, 'Sorry, only store owners can write forum posts.')
+        return redirect(reverse('home'))
+
+    if request.method == 'POST':
+        form = EntryForm(request.POST, request.FILES)
+        if form.is_valid():
+            entry = form.save()
+            messages.success(request, 'New entry was posted to forum!')
+            return redirect(reverse('entry_detail', args=[entry.slug]))
+        else:
+            messages.error(
+                request,
+                'Could not post new entry. Please ensure the form is valid.')
+    else:
+        form = EntryForm()
+
+    template = 'forum/create_entry.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
+
+
+@login_required
+def edit_entry(request, slug):
+    """ Edit a forum post """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
+    entry = get_object_or_404(Entry, slug=slug)
+    if request.method == 'POST':
+        form = EntryForm(request.POST, request.FILES, instance=entry)
         if form.is_valid():
             form.save()
-            messages.success(
-                request, 'Update successful...'
-                )
-            return redirect('show_review')
+            messages.success(request, 'Successfully edited forum post!')
+            return redirect(reverse('entry_detail', args=[entry.slug]))
         else:
-            messages.error(request, 'Error. Please ensure the form is valid.')
+            messages.error(
+                request,
+                'Failed to update post. Please ensure the form is valid.')
     else:
-        form = ReviewForm(instance=review)
-        context = {
-            'form': form,
-            }
-    return render(request, 'reviews/edit_review.html', context)
+        form = EntryForm(instance=entry)
+        messages.info(
+            request,
+            f'You are editing the forum post "{entry.title}"')
+
+    template = 'forum/edit_entry.html'
+    context = {
+        'form': form,
+        'entry': entry,
+    }
+
+    return render(request, template, context)
+
+
+@login_required
+def delete_entry(request, slug):
+    """ Delete forum entry """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
+    entry = get_object_or_404(Entry, slug=slug)
+    entry.delete()
+    messages.success(request, 'Forum post was deleted.')
+    return redirect('/review/')

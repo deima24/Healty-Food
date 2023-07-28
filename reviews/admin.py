@@ -1,10 +1,26 @@
 from django.contrib import admin
-from .models import Review
+from .models import Entry, EntryType, Response
 
 
-@admin.register(Review)
-class Review(admin.ModelAdmin):
-    """
-    Displays the fields for the Review model
-    """
-    list_display = ('user', 'product', 'review', 'created_on')
+
+
+
+@admin.register(Entry)
+class EntryAdmin(admin.ModelAdmin):
+    list_display = (
+        'title',
+        'slug',
+        #'entry_type',
+        'create_date',
+    )
+    prepopulated_fields = {'slug': ('title',)}
+
+
+@admin.register(Response)
+class ResponseAdmin(admin.ModelAdmin):
+    list_display = (
+        'entry',
+        'author',
+        'create_date',
+        'approved',
+    )
