@@ -10,7 +10,7 @@ class EntryAdmin(admin.ModelAdmin):
     list_display = (
         'title',
         'slug',
-        #'entry_type',
+        'entry_type',
         'create_date',
     )
     prepopulated_fields = {'slug': ('title',)}
@@ -24,3 +24,11 @@ class ResponseAdmin(admin.ModelAdmin):
         'create_date',
         'approved',
     )
+
+@admin.register(EntryType)
+class EntryTypeAdmin(admin.ModelAdmin):
+    list_display = (
+        'name',
+        'friendly_name',
+    )
+    prepopulated_fields = {'name': ('friendly_name',)}

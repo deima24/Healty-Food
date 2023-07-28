@@ -30,9 +30,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['localhost',
     'healthy-food-pp5-5332948976f5.herokuapp.com',
-    '8000-deima24-healtyfood-sgjvdmc676r.ws-eu102.gitpod.io']
+    '8000-deima24-healtyfood-hisqyhvbknh.ws-eu102.gitpod.io']
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-deima24-healtyfood-sgjvdmc676r.ws-eu102.gitpod.io', 'https://healthy-food-pp5-5332948976f5.herokuapp.com']
+CSRF_TRUSTED_ORIGINS = ['https://8000-deima24-healtyfood-hisqyhvbknh.ws-eu102.gitpod.io', 'https://healthy-food-pp5-5332948976f5.herokuapp.com']
 
 
 # Application definition
