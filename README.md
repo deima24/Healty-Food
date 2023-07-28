@@ -319,3 +319,45 @@ Create custom_storages.py file.
 From Stripe account, under Developers > API keys copy Public Key and Secret Key and set as config vars in Heroku app settings.
 Create new Webhook endpoint for deployed site and enable all events. Then add Signing Secret to Heroku app config vars.
 
+# Development
+
+The following options are available to work with this code or run in a local environment.
+
+## Fork
+
+Any changes made to a forked repository do not affect the original repository.
+* Log into GitHub and click on repository to download
+* Click the Fork buttonin the top right-hand corner
+* Select a different owner if necessary
+* Click Create Fork
+* The repo is now in your chosen account and can be cloned or changed
+
+## Clone
+
+Changes made to a cloned repository will affect the original one.
+* Navigate to the main page of the repostitory (this could be a forked instance)
+* Click on the Code dropdown menu above the list of files
+* Choose a method to copy the URL for the repository: either via HTTPS, by using an SSH key, or by using GitHub CLI
+* In your work environment, open Git Bash and change current directory to target location for cloned repository
+* Type git clone followed by the copied URL and press enter Enter
+
+## Download as ZIP
+
+* Log into GitHub and click on repository to download
+* Select Code and click "Download Zip" file
+* Once download is completed, extract ZIP file and use in your local environment
+
+# Source Credits
+
+### General:
+
+The official Django Documentation was used throughout creating this project. The skeleton of this project is based on the Code Institute tutorial "Boutique Ado".
+
+### Basket tools:
+
+Django Docs on creating custom template tags
+
+### User alerts (toasts/messages):
+
+The live feedback messages to alert user actions were implemented using the Django message framework and the respective message levels.
+The alert pop-up frames were rendered using Bootstrap 5 toasts.
