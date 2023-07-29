@@ -181,6 +181,9 @@ footer {
     background-color: #87CEFA;
     
 }
+.policy {
+    color: #000;
+}
 
 
 @media (max-width: 320px) {
@@ -217,4 +220,15 @@ footer {
         margin: 0;
     }
     
+}
+
+@media (max-width: 550px) {
+    .order-cook-deliver {
+        flex-direction: column; 
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
 }
