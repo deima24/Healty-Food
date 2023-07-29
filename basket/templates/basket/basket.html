@@ -66,11 +66,11 @@
 
                         <tr>
                             
-                            <td>Delivery Cost: £ {{ delivery | floatformat:2 }}</td>
-                            <td>Grand Total: £ {{ grand_total | floatformat:2 }}</td>
+                            <td colspan="2">Delivery Cost: £ {{ delivery | floatformat:2 }}</td>
+                            <td colspan="2">Grand Total: £ {{ grand_total | floatformat:2 }}</td>
                         </tr>
                         <tr>
-                            <td>
+                            <td colspan="4">
                                 <a href="{% url 'categories' %}" class="btn btn-white-bg">
                                     Keep Shopping
                                 </a>
