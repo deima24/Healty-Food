@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from django.conf import settings
 from products.models import Product
 
+
 class EntryType(models.Model):
     """
     Defines type (category) object
@@ -29,11 +30,10 @@ class Entry(models.Model):
     title = models.CharField(max_length=100, unique=True)
     slug = models.SlugField(max_length=100, unique=True)
     content = models.TextField()
-    
+
     create_date = models.DateField(auto_now_add=True)
     entry_type = models.ForeignKey(
         EntryType, on_delete=models.PROTECT, default=1, related_name="type")
-    
 
     class Meta:
         ordering = ['-create_date']
@@ -52,7 +52,6 @@ class Entry(models.Model):
         helper method to return number of approved responses only
         """
         return self.response.filter(approved=True)
-
 
 
 class Response(models.Model):

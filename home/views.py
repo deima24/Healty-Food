@@ -8,6 +8,7 @@ def index(request):
 
     return render(request, 'home/index.html')
 
+
 def about(request):
     """
     renders about page

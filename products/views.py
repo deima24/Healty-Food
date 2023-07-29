@@ -38,6 +38,7 @@ def products(request):
 
     return render(request, 'products/products.html', context)
 
+
 def product_detail(request, product_id):
     """
     Displays product details

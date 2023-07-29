@@ -2,9 +2,6 @@ from django.contrib import admin
 from .models import Entry, EntryType, Response
 
 
-
-
-
 @admin.register(Entry)
 class EntryAdmin(admin.ModelAdmin):
     list_display = (
@@ -24,6 +21,7 @@ class ResponseAdmin(admin.ModelAdmin):
         'create_date',
         'approved',
     )
+
 
 @admin.register(EntryType)
 class EntryTypeAdmin(admin.ModelAdmin):
