@@ -441,7 +441,13 @@ In a basket page
 In a check out page
 * Attribute placeholder not allowed on element select at this point.
 
+# Acknowledgements
 
+This website was built as part of the Full Stack Development course from Code Institute. I would like to thank my mentor for all his feedback and guidence throughout. Also the Code Institute slack community including tutor support.
+
+## Facebook Page
+
+![basket](/media/facebook-page.png)
 
 
 
