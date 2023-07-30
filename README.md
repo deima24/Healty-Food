@@ -165,8 +165,8 @@ All CRUD functionality is placed intuitively with the relevant features of the s
 
 ## Reviews Page
 
-* Gives option to select the title to which product you want to give review
-* Shows creatted date review owner can delete or edit it
+* Gives option to select the topic to which topic you want to give review or an opion
+* Shows created date owner can delete or edit it and users can commented in the post 
 
 ![basket](/media/forum-review.png)
 
