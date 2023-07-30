@@ -76,10 +76,15 @@ All CRUD functionality is placed intuitively with the relevant features of the s
 * Responsive navbar with dropdown menu
 * Navigation options dependant of user authentication/authorisation
 
+![basket](/media/nav-bar.png)
+![basket](/media/nav-bar-dropdown.png)
+
 ## Home page
 
 * Home page with banner image and introduction
-* Order Now button 
+* Order Now button
+
+![basket](/media/home-page.png)
 
 ## About page
 
@@ -87,28 +92,40 @@ All CRUD functionality is placed intuitively with the relevant features of the s
 * Shop opening hours
 * Info about Healthy food
 
+![basket](/media/about-page.png)
+
 ## Sign Up
 
 * Allows new users to create account
 * Sign up process includes confirmation email with confirmation link
+
+![basket](/media/sign-up.png)
 
 ## Login
 
 * Allows existing users to log into their account
 * Includes Remember me checkbox and Forgot Password option
 
+![basket](/media/sign-in.png)
+
 ## Logout
 
 * Allows authenticated users to securely log out of their account
+
+![basket](/media/sign-out.png)
 
 ## Category page
 
 * Lists all categories of products
 
+![basket](/media/categories.png)
+
 ## Products page (of same category)
 
 * Lists all products of the same category
 * Quick link to category page
+
+![basket](/media/products.png)
 
 ## Product details page
 
@@ -119,12 +136,16 @@ All CRUD functionality is placed intuitively with the relevant features of the s
 * Add to basket button
 * Edit and delete option for authorised users for each product
 
+![basket](/media/product-description.png)
+
 ## Add Product page
 
 * Authorised admin users only!
 * Complete product form with image upload option
 * Cancel button
 * Add product button to add product to database
+
+![basket](/media/add-product.png)
 
 ## Edit Product page
 
@@ -133,6 +154,8 @@ All CRUD functionality is placed intuitively with the relevant features of the s
 * Form is pre-populated with existing product's details
 * Cancel button
 * Update product button to update existing product in database
+
+![basket](/media/edit-delete-button.png)
 
 ## Delete Product option
 
@@ -145,10 +168,14 @@ All CRUD functionality is placed intuitively with the relevant features of the s
 * Gives option to select the title to which product you want to give review
 * Shows creatted date review owner can delete or edit it
 
+![basket](/media/forum-review.png)
+
 ## Shopping Basket
 
 * Live update of basket status in navbar
 * Counter in nav element displays only the number of different products, not the total of all products.
+
+![basket](/media/basket.png)
 
 ## Shopping Basket
 
@@ -159,6 +186,8 @@ All CRUD functionality is placed intuitively with the relevant features of the s
 *  Continue shopping button
 *  Proceed to checkout option
 
+  ![basket](/media/shopping-basket.png)
+
 ## Checkout page
 
 * Checkout form, including sections for personal info, contact details and card details
@@ -166,6 +195,8 @@ All CRUD functionality is placed intuitively with the relevant features of the s
 * Current order summery
 * Edit Basket button
 * Pay now button
+
+![basket](/media/checkout1.png)
 
 ## Checkout Success page
 
