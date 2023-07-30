@@ -210,6 +210,14 @@ All CRUD functionality is placed intuitively with the relevant features of the s
 * Update Info button
 * Listing of past orders in order history
 
+## 404 Error page
+
+* Customised 404 error page
+* Informs user of invalid URL
+* Back button redirects user back to home page
+
+![basket](/media/error.png)
+
 ## Possible Future Features
 
 ### Extended product range
@@ -392,3 +400,48 @@ Django Docs on creating custom template tags
 
 The live feedback messages to alert user actions were implemented using the Django message framework and the respective message levels.
 The alert pop-up frames were rendered using Bootstrap 5 toasts.
+
+
+# Testing
+
+## Validator Testing
+
+### HTML W3C validator
+
+As this is a Django project, the HTML couldn't be tested via the site's URL, due to Django tags and Jinja templating language in HTML files. Instead, the source code of each page was pasted into the validator directly.
+
+About:
+
+![basket](/media/about.png)
+
+Base:
+
+![basket](/media/base-fix.png)
+
+Had to fix 2 problems.
+
+Category:
+
+![basket](/media/category.png)
+
+Product:
+
+![basket](/media/product.png)
+
+Product description:
+
+![basket](/media/product-description-html.png)
+
+
+# Unfixed bugs
+
+In a basket page
+* A table row was 5 columns wide and exceeded the column count established by the first row (4).
+
+In a check out page
+* Attribute placeholder not allowed on element select at this point.
+
+
+
+
+
