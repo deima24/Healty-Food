@@ -5,3 +5,6 @@ STRIPE_PUBLIC_KEY="pk_test_51NS5qfEcKFRGV4ZzCXs6oHUl3GW74pBAoqv3tEApwrXrMETbZtga
 
 os.environ["DATABASE_URL"] = "postgres://lelfuole:sBx9iFQZN7c-uqX7_r2Da23zg8vuUkb2@surus.db.elephantsql.com/lelfuole"
 os.environ["SECRET_KEY"] = "randomkey123..."
+
+AWS_ACCESS_KEY_ID = "AKIATF4CE4M6H62VG226"
+AWS_SECRET_ACCESS_KEY = "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"
