@@ -34,7 +34,7 @@ DEBUG = False
 ALLOWED_HOSTS = [
     "localhost",
     "healthy-food-pp5-5332948976f5.herokuapp.com",
-    "8000-deima24-healtyfood-hisqyhvbknh.ws-eu102.gitpod.io",
+    "8000-deima24-healty-food-pgul3if0hr.us2.codeanyapp.com",
 ]
 
 CSRF_TRUSTED_ORIGINS = [
